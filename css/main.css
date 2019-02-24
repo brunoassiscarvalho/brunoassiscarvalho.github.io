@@ -25,6 +25,24 @@ body{
 
 }
 
+
+.logo {
+	-webkit-text-fill-color: #002c00;
+	color: #002c00;;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: green;
+	/*font-family: cursive;*/
+	/*font-family: "Lucida Console", Courier, monospace;*/
+	font-family: myFirstFont;
+	font-size: 180px;	
+	width:100%;
+	text-align: center;	
+	text-transform: uppercase;
+
+
+}
+
+
 .rotateAnimation{
 	animation-name: spin;
     animation-duration: 4000ms;
