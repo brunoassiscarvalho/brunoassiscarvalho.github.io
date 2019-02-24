@@ -1,3 +1,9 @@
+:root {
+	--min-degree:0deg;
+	--max-degree:360deg;
+	--perspective-value:400px;
+}
+
 body{
 	background-color:black;
 }
@@ -16,6 +22,10 @@ body{
 	text-align: center;	
 	text-transform: uppercase;
 
+
+}
+
+.rotateAnimation{
 	animation-name: spin;
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
@@ -28,22 +38,22 @@ body{
 }
 
 @-ms-keyframes spin {
-    from { -ms-transform: perspective(400px) rotateY(0deg); }
-    to { -ms-transform: perspective(400px) rotateY(45deg); }
+    from { -ms-transform: perspective(var(--perspective-value)) rotateY(var(--min-degree)); }
+    to { -ms-transform: perspective(var(--perspective-value)) rotateY(var(--max-degree)); }
 }
 @-moz-keyframes spin {
-    from { -moz-transform: perspective(400px) rotateY(0deg); }
-    to { -moz-transform: perspective(400px) rotateY(45deg); }
+    from { -moz-transform: perspective(var(--perspective-value)) rotateY(var(--min-degree)); }
+    to { -moz-transform: perspective(var(--perspective-value)) rotateY(var(--max-degree)); }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: perspective(400px) rotateY(0deg);}
-    to { -webkit-transform: perspective(400px) rotateY(45deg);}
+    from { -webkit-transform: perspective(var(--perspective-value)) rotateY(var(var(--min-degree)));}
+    to { -webkit-transform: perspective(var(--perspective-value)) rotateY(var(--max-degree));}
 }
 @keyframes spin {
     from {
-        transform: perspective(400px) rotateY(0deg);
+        transform: perspective(var(--perspective-value)) rotateY(var(--min-degree));
     }
     to {
-        transform: perspective(400px) rotateY(45deg);
+        transform: perspective(var(--perspective-value)) rotateY(var(--max-degree));
     }
 }
